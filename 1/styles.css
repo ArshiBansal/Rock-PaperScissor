@@ -1,0 +1,153 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.game-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 500px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 40px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.timer {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.choice {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choice img {
+    width: 80%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.choice:active {
+    transform: scale(0.95);
+}
+
+.choice:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.result {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #444;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.result.win {
+    color: #28a745;
+    animation: winAnimation 1s ease-in-out;
+}
+
+.result.draw {
+    color: #17a2b8;
+    animation: drawAnimation 1s ease-in-out;
+}
+
+.result.lose {
+    color: #dc3545;
+    animation: loseAnimation 1s ease-in-out;
+}
+
+@keyframes winAnimation {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
+
+@keyframes drawAnimation {
+    0% { transform: rotate(45deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes loseAnimation {
+    0% { transform: scale(1.2); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.score {
+    font-size: 18px;
+    color: #333;
+}
+
+#user-score, #computer-score {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.history {
+    margin-top: 30px;
+}
+
+.history h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+#history-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.history-item {
+    font-size: 18px;
+    color: #555;
+}
+
+.reset-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Rock, Paper, Scissors</h1>
+
+        <div id="timer" class="timer">Time left: <span id="time-left">10</span>s</div>
+
+        <div id="choices" class="choices">
+            <div class="choice" onclick="playGame('rock')">
+                <img src="rock.jpg" alt="Rock">
+            </div>
+            <div class="choice" onclick="playGame('paper')">
+                <img src="paper.jpg" alt="Paper">
+            </div>
+            <div class="choice" onclick="playGame('scissors')">
+                <img src="scissor.jpg" alt="Scissors">
+            </div>
+        </div>
+
+        <div id="result" class="result"></div>
+
+        <div id="score" class="score">
+            <p>Your Score: <span id="user-score">0</span></p>
+            <p>Computer's Score: <span id="computer-score">0</span></p>
+        </div>
+
+        <div id="history" class="history">
+            <h3>Game History</h3>
+            <ul id="history-list">
+                <!-- History of moves will be displayed here -->
+            </ul>
+        </div>
+
+        <div id="modal" style="display: none;">
+            <div class="modal-content">
+                <p id="modal-message"></p>
+                <button id="modal-play">Play</button>
+                <button id="modal-cancel">Cancel</button>
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
